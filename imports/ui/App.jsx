@@ -48,11 +48,12 @@ export class App extends Component {
 	render() {
 		return(
 			<div className="container">
-				<div className="row">
-				<h1 className="col s4">Articles</h1>
-				</div>
+				<h2>Astro Ant Articles</h2>
+				<ul className="row right">
+					<p className="col s12 m2"> meow </p>
+				</ul>
 
-				<ul>
+				<ul className="row">
 					{this.renderArticles()}
 				</ul>
 
@@ -62,8 +63,7 @@ export class App extends Component {
 					<input type="text" ref="content" placeholder="content"/>
 					<input type="text" ref="tags" placeholder="tags"/>
 					<input type="text" ref="comments" placeholder="comments"/>
-					
-					<a type="submit" name="action" className="btn-floating btn-large waves-effect waves-light red" ><i className="material-icons" >add</i></a>
+					<button className="btn-floating btn-large waves-effect waves-light red" type="submit" name="action"><i className="material-icons">+</i></button>
 				</form>
 				</div>
 			)

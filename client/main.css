@@ -1,1 +1,8 @@
 /* CSS declarations go here */
+h2 {
+	font-family: 'Righteous', cursive;
+	color: #601848;
+}
+.right {
+	color: pink;
+}

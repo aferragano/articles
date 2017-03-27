@@ -8,12 +8,18 @@ export default class Article extends Component {
 	}
 	render() {
 		return (
-			<li className="col s12 m7"> {this.props.article.title}
-			<button className="delete" onClick={this.deleteThisArticle.bind(this)}> X</button>
-			<i className="large material-icons">insert_chart</i>
-			<br/>
-			{this.props.article.subtitle}
-			{this.props.article.createdAt}
+			<li className="col s12 m7"> 
+				<h3>{this.props.article.title}</h3>
+				
+				<br/>
+				<h5>{this.props.article.subtitle}</h5>
+				<p>
+					{this.props.article.content}
+					<a>...</a>
+				</p>
+				{this.props.article.createdAt}
+				<i className="delete small material-icons">mode_edit</i>
+				<i className="delete small material-icons" onClick={this.deleteThisArticle.bind(this)}>delete</i>
 			</li>
 			);
 	}
