@@ -1,8 +1,24 @@
 /* CSS declarations go here */
-h2 {
+h4 {
 	font-family: 'Righteous', cursive;
-	color: #601848;
+	color: white;
+	padding-left: 5px;
 }
 .right {
 	color: pink;
+}
+.nav-wrapper{
+	background-color: #1E2528;
+
+}
+.nav-wrapper li {
+	color: red;
+}
+
+.card {
+	color: #1E2528;
+	padding: 0;
+}
+* {
+	box-shadow: none;
 }

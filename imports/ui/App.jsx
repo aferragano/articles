@@ -21,7 +21,7 @@ export class App extends Component {
 			content: this.refs.content.value,
 			tags: this.refs.tags.value,
 			comments: this.refs.comments.value,
-			createdAt: new Date(),
+			createdAt: Date.now(),
 		}
 		Meteor.call('insertArticle', article, (error) => {
 			if(error) {
@@ -32,9 +32,10 @@ export class App extends Component {
 				ReactDOM.findDOMNode(this.refs.content).value = '';
 				ReactDOM.findDOMNode(this.refs.tags).value = '';
 				ReactDOM.findDOMNode(this.refs.comments).value = '';
+				
 				alert('shit added');
 
-				browserHistory.push('/');
+				// browserHistory.push('/');
 			}
 		})
 
@@ -50,23 +51,45 @@ export class App extends Component {
 	render() {
 		return(
 			<div className="container">
-				<h2>Astro Ant Articles</h2>
+			 <nav>
+			    <div className="nav-wrapper col s12 m12">
+			      <a href="#" className="brand-logo"><h4>Articles</h4></a>
+			      <ul id="nav-mobile" className="right hide-on-med-and-down">
+			        <li><a href="sass.html">Link</a></li>
+			        <li><a href="badges.html">Link</a></li>
+			        <li><a href="collapsible.html">Link</a></li>
+			      </ul>
+			    </div>
+		  	</nav>
+				
 				<ul className="row right">
-					<p className="col s12 m2"> meow </p>
+					<div className="col s12 m12"> 
+						<div className="nav-wrapper">
+				      <form>
+				        <div className="input-field">
+				          <input type="search"/>
+				          <label className="label-icon"><i className="material-icons">search</i></label>
+				          <i className="material-icons">close</i>
+				        </div>
+				      </form>
+				    </div>
+					</div>
 				</ul>
 
 				<ul className="row">
 					{this.renderArticles()}
 				</ul>
-
-				<form className="new-Article" onSubmit={this.handleSubmit.bind(this)}>
-					<input type="text" ref="title" placeholder="title of article"/>
-					<input type="text" ref="subtitle" placeholder="subtitle of article"/>
-					<input type="text" ref="content" placeholder="content"/>
-					<input type="text" ref="tags" placeholder="tags"/>
-					<input type="text" ref="comments" placeholder="comments"/>
-					<button className="btn-floating btn-large waves-effect waves-light red" type="submit" name="action"><i className="material-icons">+</i></button>
-				</form>
+				<div className="container form container">
+				<h5>Add article</h5>
+					<form className="new-Article col s4 m2" onSubmit={this.handleSubmit.bind(this)}>
+						<input type="text" ref="title" placeholder="title of article"/>
+						<input type="text" ref="subtitle" placeholder="subtitle of article"/>
+						<input type="text" ref="content" placeholder="content"/>
+						<input type="text" ref="tags" placeholder="tags"/>
+						<input type="text" ref="comments" placeholder="comments"/>
+						<button className="btn-floating btn-large waves-effect waves-light red" type="submit" name="action"><i className="material-icons">+</i></button>
+					</form>
+				</div>
 				</div>
 			)
 	}

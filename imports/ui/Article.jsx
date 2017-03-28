@@ -8,18 +8,23 @@ export default class Article extends Component {
 	}
 	render() {
 		return (
-			<li className="col s12 m7"> 
-				<h3>{this.props.article.title}</h3>
-				
-				<br/>
-				<h5>{this.props.article.subtitle}</h5>
-				<p>
-					{this.props.article.content}
-					<a>...</a>
-				</p>
-				{this.props.article.createdAt}
-				<i className="delete small material-icons">mode_edit</i>
-				<i className="delete small material-icons" onClick={this.deleteThisArticle.bind(this)}>delete</i>
+			<li className="col s12 m7 "> 
+				<div className="row">
+	        
+	          <div className="card ">
+	            <div className="card-content ">
+	              <span className="card-title">{this.props.article.title}</span>
+	              <p>{this.props.article.subtitle}</p>
+	              <p>{this.props.article.content}<a>...</a></p>
+	              <p>{this.props.article.createdAt.toString()} date</p>
+	            </div>
+	            <div className="card-action">
+	              <a href="#"><i className="delete small material-icons">mode_edit</i></a>
+	              <a href="#"><i className="delete small material-icons" onClick={this.deleteThisArticle.bind(this)}>delete</i></a>
+	            </div>
+	          
+	        </div>
+	      </div>
 			</li>
 			);
 	}

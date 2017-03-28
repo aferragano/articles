@@ -8,6 +8,7 @@ const ArticleSchema = new SimpleSchema({
 	content: {type: String},
 	tags: {type: String},
 	comments: {type: String},
+	createdAt: {type: Date},
 	
 });
 
