@@ -9,7 +9,6 @@ const ArticleSchema = new SimpleSchema({
 	tags: {type: String},
 	comments: {type: String},
 	createdAt: {type: Date},
-	
 });
 
 Articles.attachSchema(ArticleSchema);
