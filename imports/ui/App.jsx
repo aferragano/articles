@@ -2,7 +2,9 @@ import React, { Component, PropTypes } from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
 import ReactDOM from 'react-dom';
 import { Articles } from '../api/articles.js';
+
 import Article from './Article';
+import Edit from './EditArticle';
 import { browserHistory } from 'react-router';
 
 // import MuiThemeProvider from '../material-ui/styles/MuiThemeProvider';
