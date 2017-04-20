@@ -12,7 +12,9 @@ h4 {
 
 }
 .nav-wrapper li {
-	color: red;
+	color: #948E99;
+	padding-right: 10px;
+	cursor:pointer;
 }
 
 .card {
@@ -21,4 +23,5 @@ h4 {
 }
 * {
 	box-shadow: none;
+	
 }

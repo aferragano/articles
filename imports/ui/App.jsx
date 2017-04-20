@@ -55,9 +55,9 @@ export class App extends Component {
 			    <div className="nav-wrapper col s12 m12">
 			      <a href="#" className="brand-logo"><h4>Articles</h4></a>
 			      <ul id="nav-mobile" className="right hide-on-med-and-down">
-			        <li><a href="sass.html">Link</a></li>
-			        <li><a href="badges.html">Link</a></li>
-			        <li><a href="collapsible.html">Link</a></li>
+			        <li><a href="https://dribbble.com/aferragano">dribble</a></li>
+			        <li><a href="http://codepen.io/aferragano/">CodePen</a></li>
+			        <li><a href="https://github.com/aferragano">Github</a></li>
 			      </ul>
 			    </div>
 		  	</nav>
