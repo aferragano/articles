@@ -20,8 +20,74 @@ h4 {
 .card {
 	color: #1E2528;
 	padding: 0;
+	margin: 5px 35px 40px 5px;
+	overflow: hidden;
+	height: 420px;
+
 }
 * {
 	box-shadow: none;
-	
+
+}
+.banner {
+	background-color: #595B5A;
+	height: 40px;
+}
+
+.input-field{
+	background-color: #595B5A;
+	display: block;
+}
+
+.card-title {
+	text-overflow: wrap;
+	word-wrap: break-word;
+	text-transform: uppercase;
+	color: #595B5A;
+	height: 60px;
+	font-family: 'Chau Philomene One', sans-serif;
+}
+.subtitle {
+	text-overflow: wrap;
+	word-wrap: break-word;
+	text-transform: uppercase;
+	color: #595B5A;
+	height: 25px;
+	font-family: 'Chau Philomene One', sans-serif;
+}
+
+.content {
+	height:170px;
+	padding-top:20px;
+}
+.date{
+		font-family: 'Chau Philomene One', sans-serif;
+		font-size: 12px;
+		text-align: right;
+		padding:0;
+		margin:0;
+}
+.card-action{
+	text-align:center;
+	padding-top:0px;
+	margin-top:0px;
+}
+.fullArticleLink{
+	font-family: 'Chau Philomene One', sans-serif;
+	padding-left:10px;
+}
+.editArticle {
+	margin-top: 12px;
+	float: left;
+}
+.deleteArticle {
+	margin-top: 12px;
+	float: right;
+}
+.plusArticle{
+	font-size: 50px;
+	color: red;
+}
+.cardPad{
+	margin:5px;
 }

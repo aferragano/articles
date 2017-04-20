@@ -57,37 +57,33 @@ export class App extends Component {
 			      <ul id="nav-mobile" className="right hide-on-med-and-down">
 			        <li><a href="https://dribbble.com/aferragano">dribble</a></li>
 			        <li><a href="http://codepen.io/aferragano/">CodePen</a></li>
-			        <li><a href="https://github.com/aferragano">Github</a></li>
+			        <li><a href="https://github.com/aferragano"></a>Github</li>
 			      </ul>
 			    </div>
 		  	</nav>
+				<div className="banner col s12 m12"> 
+					<form>
+		        <div className="input-field col s12 m12" >
+		          <input type="search"/>
+		          <label className="label-icon"><i className="material-icons">search</i></label>
+		          <i className="material-icons">close</i>
+		        </div>
+		      </form> 
+		    </div>	
 				
-				<ul className="row right">
-					<div className="col s12 m12"> 
-						<div className="nav-wrapper">
-				      <form>
-				        <div className="input-field">
-				          <input type="search"/>
-				          <label className="label-icon"><i className="material-icons">search</i></label>
-				          <i className="material-icons">close</i>
-				        </div>
-				      </form>
-				    </div>
-					</div>
-				</ul>
 
 				<ul className="row">
 					{this.renderArticles()}
 				</ul>
 				<div className="container form container">
 				<h5>Add article</h5>
-					<form className="new-Article col s4 m2" onSubmit={this.handleSubmit.bind(this)}>
+					<form className="new-Article col s12 m3" onSubmit={this.handleSubmit.bind(this)}>
 						<input type="text" ref="title" placeholder="title of article"/>
 						<input type="text" ref="subtitle" placeholder="subtitle of article"/>
 						<input type="text" ref="content" placeholder="content"/>
 						<input type="text" ref="tags" placeholder="tags"/>
 						<input type="text" ref="comments" placeholder="comments"/>
-						<button className="btn-floating btn-large waves-effect waves-light red" type="submit" name="action"><i className="material-icons">+</i></button>
+						<button className="btn-floating btn-medium waves-effect waves-light orange plusArticle" type="submit" name="action"><i className="material-icons plus">add</i></button>
 					</form>
 				</div>
 				</div>

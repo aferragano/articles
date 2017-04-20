@@ -10,26 +10,23 @@ export default class Article extends Component {
 	}
 	render() {
 		return (
-			<li className="col s12 m7 "> 
+			<li className="col s4 "> 
 				<div className="row">
 	        
 	          <div className="card ">
 	            <div className="card-content ">
 	              <span className="card-title">{this.props.article.title}</span>
-	              <p>{this.props.article.subtitle}</p>
-	              <p>{this.props.article.content}<a>...</a></p>
-	              <p>{this.props.article.createdAt.toString()} date</p>
+	              <p className="subtitle" >{this.props.article.subtitle}</p>
+	              <p className="content" >{this.props.article.content}<a>...</a></p>
+	              <p className="date"  >{this.props.article.createdAt.toString().slice(0, 10)} </p>
 	            </div>
 	            <div className="card-action">
-	              <a href="#"><i className="delete small material-icons">mode_edit</i></a>
-	              <a href="#"><i className="delete small material-icons" onClick={this.deleteThisArticle.bind(this)}>delete</i></a>
-	            {this.props.article._id}
-	            </div>
 
-	          <Link to="/fullArticle">gypsy</Link>
-	          <Link to={{	pathname: '/fullArticle/:id'
-	       
-	        						}} >gyps8y</Link>
+	              <Link className="fullArticleLink" to={{	pathname: '/fullArticle/:id'}} >full article</Link>
+	              <br/>
+	              <a href="#"className="editArticle" ><i className="delete small material-icons">mode_edit</i></a>
+	              <a href="#"className="deleteArticle" ><i className="delete small material-icons" onClick={this.deleteThisArticle.bind(this)}>delete</i></a>
+	            </div>
 	        </div>
 	      </div>
 			</li>
